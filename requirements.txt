@@ -1,0 +1,10 @@
+numpy
+pandas
+scikit-learn
+ipykernel
+kagglehub[pandas-datasets]
+matplotlib
+seaborn
+scikit-learn
+streamlit
+joblib
