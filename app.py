@@ -18,7 +18,7 @@ weight_option = st.radio("📦 Choose Weight Input Method", ["Quick Select", "Cu
 if weight_option == "Quick Select":
     weight = st.selectbox("Select Weight (g)", options=[100, 120, 135, 150, 180, 200, 250, 300], index=2)
 else:
-    weight = st.slider("Adjust Weight (g)", min_value=50, max_value=300, value=135, step=.25)
+    weight = st.slider("Adjust Weight (g)", min_value=50.0, max_value=300.0, value=135.0, step=0.25)
 
 resolution = st.slider("📱 Screen Size (inches)", min_value=3.0, max_value=10.0, value=5.0)
 
@@ -57,6 +57,5 @@ input_scaled = scaler.transform(input_features)
 if st.button("Predict Price"):
     pred_price = model.predict(input_scaled)[0]
     st.success(f"Predicted Price: Rs:{pred_price:.2f}")
-
 
 
