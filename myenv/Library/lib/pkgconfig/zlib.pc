@@ -1,0 +1,13 @@
+prefix=E:/Project/ML_Kaggle/01_Mobile_Price_Prediction/myenv/Library
+exec_prefix=E:/Project/ML_Kaggle/01_Mobile_Price_Prediction/myenv/Library
+libdir=E:/Project/ML_Kaggle/01_Mobile_Price_Prediction/myenv/Library/lib
+sharedlibdir=E:/Project/ML_Kaggle/01_Mobile_Price_Prediction/myenv/Library/lib
+includedir=E:/Project/ML_Kaggle/01_Mobile_Price_Prediction/myenv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
