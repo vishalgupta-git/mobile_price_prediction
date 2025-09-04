@@ -35,7 +35,7 @@ streamlit run app.py
 ## 🛠 Tools & Technologies Used
 
 ### 📊 Machine Learning & Data Processing
-- Python 3.x  
+- Python 3.12  
 - Pandas  
 - NumPy  
 - Scikit-learn  
@@ -52,11 +52,11 @@ streamlit run app.py
 
 ### 🌐 Web App & Deployment
 - Streamlit – for building the interactive UI  
-- Joblib / Pickle – for model and scaler serialization  
+- Pickle – for model and scaler serialization  
 
 ### 🧪 Development Tools
 - Jupyter Notebook  
-- VS Code / Any Python IDE  
+- VS Code
 
 ### 📜 Licensing
 - Apache-2.0 License
@@ -70,8 +70,7 @@ Once the app is running:
    - Internal Memory
    - Battery Capacity
    - Front & Rear Camera
-   - Weight
-   - Brand, etc.
+   - Weight, etc.
 2. Click on the **Predict** button.
 3. The app will show the predicted price based on your inputs using the trained **Random Forest** model.
 
@@ -92,9 +91,7 @@ The training notebook (`notebook.ipynb`) covers:
 
 ## 🖼️ Streamlit UI Preview
 
-![App screenshot](ui.png)
-
-> Ensure `ui.png` is located in the root directory of the project to render correctly on GitHub.
+![App screenshot](img/ui.png)
 
 ---
 

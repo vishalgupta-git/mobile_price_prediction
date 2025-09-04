@@ -9,7 +9,7 @@ scaler = joblib.load('scaler.pkl')
 
 st.title("Cellphone Price Prediction")
 
-st.image("mobile.png", caption="Cellphone Image")
+st.image("img/mobile.png", caption="Cellphone Image")
 
 # Inputs
 sale = st.slider("🛍️ Adjust Sale Percentage", min_value=0, max_value=100, value=10, step=1)
