@@ -3,15 +3,13 @@ import numpy as np
 import pandas as pd
 import joblib
 
-# Load model and scaler
-model = joblib.load('best_rf.pkl')
-scaler = joblib.load('scaler.pkl')
+# Load model, scaler, and PCA transformer
+model = joblib.load('./model/best_rf.pkl')
 
 st.title("Cellphone Price Prediction")
 
 st.image("img/mobile.png", caption="Cellphone Image")
 
-# Inputs
 sale = st.slider("🛍️ Adjust Sale Percentage", min_value=0, max_value=100, value=10, step=1)
 
 weight_option = st.radio("📦 Choose Weight Input Method", ["Quick Select", "Custom"])
@@ -40,7 +38,6 @@ battery = st.slider("🔋 Battery Capacity (mAh)", min_value=1000, max_value=100
 
 thickness = st.number_input("📏 Thickness (mm)", min_value=3.0, max_value=15.0, value=7.4, step=0.1)
 
-# Prepare input data dictionary (column names must match training data)
 input_dict = {
     "Sale": sale,
     "weight": weight,
@@ -56,17 +53,14 @@ input_dict = {
     "thickness": thickness
 }
 
-# Create DataFrame from input dict (1 row)
 input_df = pd.DataFrame([input_dict])
-
-# Scale inputs using scaler
-input_scaled_array = scaler.transform(input_df)
-input_scaled = pd.DataFrame(input_scaled_array, columns=input_df.columns)
+print(input_dict)
 
 if st.button("Predict Price"):
     st.write("### Input Summary")
     st.json(input_dict)
-
-    pred_price = model.predict(input_scaled)[0]
+    print(input_df.shape)
+    print(model.predict(input_df))
+    pred_price = model.predict(input_df)[0]
     st.balloons()
     st.success(f"Predicted Price: Rs: {pred_price:.2f}")
